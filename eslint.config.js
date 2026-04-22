@@ -8,6 +8,10 @@ const config = eslintConfig({
   html: true,
   perfectionist: true,
   typescript: true
+}, {
+  rules: {
+    'unicorn/no-process-exit': 'off'
+  }
 });
 
 export default config;
