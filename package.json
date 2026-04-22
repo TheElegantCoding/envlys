@@ -1,21 +1,23 @@
 {
-  "name": "starter-ts",
-  "description": "📦️ Zero-config TypeScript template for rapid development. Pre-configured with modern tooling to start coding",
+  "name": "envlys",
+  "description": "📦️ A lightweight, type-safe environment variable validator for TypeScript and Bun, powered by Zod. Features auto-loading, variable expansion, and automatic .env.example generation",
   "author": "Luis Monsalve",
   "version": "0.0.0",
-  "homepage": "https://github.com/TheElegantCoding/starter-ts#readme",
+  "homepage": "https://github.com/TheElegantCoding/envlys#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheElegantCoding/starter-ts.git"
+    "url": "git+https://github.com/TheElegantCoding/envlys.git"
   },
   "keywords": [
     "typescript",
     "github",
     "git",
-    "clean-code"
+    "clean-code",
+    "environment-variables",
+    "env-validation"
   ],
   "bugs": {
-    "url": "https://github.com/TheElegantCoding/starter-ts/issues"
+    "url": "https://github.com/TheElegantCoding/envlys/issues"
   },
   "type": "module",
   "exports": {
@@ -33,16 +35,21 @@
   },
   "scripts": {
     "postinstall": "bunx gitlys init",
-    "dev": "bunx tsup --watch",
+    "dev": "bunx tsup --watch playground/index.ts",
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix",
     "release": "bunx gitlys release"
   },
   "devDependencies": {
-    "eslint-config-universal-code": "^1.0.14",
+    "@types/node": "^25.6.0",
+    "dotenv": "^17.4.2",
+    "dotenv-expand": "^13.0.0",
+    "eslint-config-universal-code": "^1.0.15",
     "gitlys": "^1.1.5",
+    "logginlys": "^3.0.2",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
   }
 }
