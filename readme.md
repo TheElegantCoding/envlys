@@ -1,8 +1,8 @@
 <img src="./.github/asset/illustration/wave_header.svg" width="100%" />
 
 <h1 id="top" align="center">
-  <img src="./.github/asset/icon/typescript.svg" width="28px" align="center" />
-  Typescript Starter Template
+  <img src="./.github/asset/icon/setting.svg" width="28px" align="center" />
+  Envlys
 </h1>
 
 <br />
@@ -15,7 +15,7 @@
 
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
 
-<img src="./.github/asset/illustration/starter_ts_cover.svg" width="100%" />
+<img src="./.github/asset/illustration/envlys_cover.svg" width="100%" />
 
 <br />
 
@@ -36,7 +36,7 @@
 <table border="0">
 <tr>
 <td>
-Zero-config TypeScript template for rapid development. Pre-configured with modern tooling to start coding
+A lightweight, type-safe environment variable validator for TypeScript and Bun, powered by Zod. Features auto-loading, variable expansion, and automatic .env.example generation
 </td>
 </tr>
 </table>
@@ -51,22 +51,12 @@ Zero-config TypeScript template for rapid development. Pre-configured with moder
 </h2>
 
 - [<img src="./.github/asset/icon/information.svg" width="20px" align="center" /> About](#about)
-- [<img src="./.github/asset/icon/satellite.svg" width="20px" align="center" /> Features](#features)
 - [<img src="./.github/asset/icon/thunder.svg" width="20px" align="center" /> Requirements](#requirements)
 - [<img src="./.github/asset/icon/package.svg" width="20px" align="center" /> Installation](#installation)
 - [<img src="./.github/asset/icon/rocket.svg" width="20px" align="center" /> Usage](#usage)
 - [<img src="./.github/asset/icon/gear.svg" width="20px" align="center" /> Configuration](#configuration)
 
 <br />
-
-<img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
-
-<h2 id="features">
-  <img src="./.github/asset/icon/satellite.svg" width="24px" align="center" />
-  Features
-</h2>
-
-[REPLACE with the features of your package]
 
 <img src="./.github/asset/illustration/divider.svg" alt="divider" width="100%" />
 
@@ -90,25 +80,25 @@ Zero-config TypeScript template for rapid development. Pre-configured with moder
 <h3><img src="./.github/asset/icon/bun.svg" width="24px" align="center" /> Bun</h3>
 
 ```bash
-bun i -D [REPLACE_WITH_PACKAGE_NAME]
+bun i -D envlys
 ```
 
 <h3><img src="./.github/asset/icon/npm.svg" width="24px" align="center" /> Npm</h3>
 
 ```bash
-npm i -D [REPLACE_WITH_PACKAGE_NAME]
+npm i -D envlys
 ```
 
 <h3><img src="./.github/asset/icon/pnpm.svg" width="24px" align="center" /> Pnpm</h3>
 
 ```bash
-pnpm i -D [REPLACE_WITH_PACKAGE_NAME]
+pnpm i -D envlys
 ```
 
 <h3><img src="./.github/asset/icon/yarn.svg" width="24px" align="center" /> Yarn</h3>
 
 ```bash
-yarn i -D [REPLACE_WITH_PACKAGE_NAME]
+yarn i -D envlys
 ```
 
 <br />
@@ -124,7 +114,31 @@ yarn i -D [REPLACE_WITH_PACKAGE_NAME]
   Usage
 </h2>
 
-[REPLACE with usage instructions]
+In order to validate your environment variables, you can use the `createEnvironment` function from the `envlys` package. This function takes an object with the following properties:
+
+```ts
+import { createEnvironment } from 'envlys';
+import { z } from 'zod';
+
+const environment = z.object({
+  NODE_ENV: z.enum([ 'development', 'production'], {
+    error: "NODE_ENV has to be either 'development' or 'production'"
+  }),
+  PORT: z.coerce.number({ error: 'PORT must be a number (e.g., 4321)' }),
+  BASE_URL: z.string({
+    error: 'Base URL is required and must be a string (e.g., http://localhost:4321)'
+  }).default('http://localhost:4321')
+});
+
+const { NODE_ENV, PORT, BASE_URL } = createEnvironment(environment, {
+  path: './',
+  generateExample: true,
+  listEnvironment: [
+    'development',
+    'production'
+  ]
+});
+```
 
 <br />
 
@@ -139,7 +153,12 @@ yarn i -D [REPLACE_WITH_PACKAGE_NAME]
   Configuration
 </h2>
 
-[REPLACE with configuration instructions]
+The `createEnvironment` function accepts a second parameter, which is an object with the following optional properties:
+
+- `path`: A string that specifies the path to the directory where the `.env` file is located. Default is `./`.
+- `generateExample`: A boolean that indicates whether to generate a `.env.example` file based on the provided Zod schema. Default is `false`.
+- `listEnvironment`: An array of strings that specifies the valid values for the `NODE_ENV` variable. Default is `['development', 'production']` this help to generate examples for every environment.
+- `filename`: A string that specifies the name of the `.env` file to load. Default is `.env`.
 
 <br />
 
