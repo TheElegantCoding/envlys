@@ -8,6 +8,7 @@
       "@src/*": ["./src/*"]
     },
     "resolveJsonModule": true,
+    "types": ["node"],
     "strict": true,
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
