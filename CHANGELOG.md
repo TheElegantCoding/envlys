@@ -16,6 +16,10 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.1] - 2026-05-08
+
+- **feat:** update tsup configuration to include platform, target, and external dependencies [`e537626`](https://github.com/TheElegantCoding/envlys/commit/e537626) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.0] - 2026-04-22
 
 - **feat:** implement createEnvironment function for loading and validating environment configurations [`37a4e75`](https://github.com/TheElegantCoding/envlys/commit/37a4e75) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)

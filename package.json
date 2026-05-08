@@ -2,7 +2,7 @@
   "name": "envlys",
   "description": "📦️ A lightweight, type-safe environment variable validator for TypeScript and Bun, powered by Zod. Features auto-loading, variable expansion, and automatic .env.example generation",
   "author": "Luis Monsalve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/TheElegantCoding/envlys#readme",
   "repository": {
     "type": "git",
