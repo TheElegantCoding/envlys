@@ -1,7 +1,7 @@
 <img src="./.github/asset/illustration/wave_header.svg" width="100%" />
 
 <h1 id="top" align="center">
-  <img src="./.github/asset/icon/setting.svg" width="28px" align="center" />
+  <img src="./.github/asset/icon/setting.svg" width="32px" align="center" />
   Envlys
 </h1>
 
