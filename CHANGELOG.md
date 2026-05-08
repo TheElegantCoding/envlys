@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.2] - 2026-05-08
+
+- **fix:** move dotenv and dotenv-expand to dependencies section in package.json [`d338063`](https://github.com/TheElegantCoding/envlys/commit/d338063) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **chore:** update gitlys and logginlys dependencies to latest versions [`88cc149`](https://github.com/TheElegantCoding/envlys/commit/88cc149) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.1] - 2026-05-08
 
 - **feat:** update tsup configuration to include platform, target, and external dependencies [`e537626`](https://github.com/TheElegantCoding/envlys/commit/e537626) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
