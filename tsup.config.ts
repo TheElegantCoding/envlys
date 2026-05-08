@@ -6,5 +6,13 @@ export default defineConfig({
   dts: true,
   splitting: false,
   clean: true,
-  minify: true
+  minify: true,
+  platform: 'node',
+  target: 'node18',
+  external: [
+    'dotenv',
+    'dotenv-expand',
+    'zod',
+    /^node:/
+  ]
 });
