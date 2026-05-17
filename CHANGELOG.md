@@ -16,6 +16,11 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.4] - 2026-05-17
+
+- **fix:** update release script to build before releasing [`8c978de`](https://github.com/TheElegantCoding/envlys/commit/8c978de) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update formatting of the files array in package.json [`a1e231d`](https://github.com/TheElegantCoding/envlys/commit/a1e231d) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.3] - 2026-05-17
 
 - **fix:** update gitlys version in devDependencies to 2.2.0 [`8369a86`](https://github.com/TheElegantCoding/envlys/commit/8369a86) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
