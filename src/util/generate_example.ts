@@ -26,7 +26,7 @@ const generateEnvironmentFile = (data: Record<string, unknown>, options?: Genera
 const generateEnvironmentExample = (data: Record<string, unknown>, options?: GenerateEnvironmentExampleOptions) => {
   if (options?.listEnvironment && options.listEnvironment.length > 0) {
     for (const environment of options.listEnvironment) {
-      const fileName = `.env.${environment}.example`;
+      const fileName = `.example.${environment}.env`;
       generateEnvironmentFile(data, { ...options, fileName });
     }
   } else {
