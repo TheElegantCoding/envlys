@@ -5,6 +5,7 @@ import { resolve } from 'node:path';
 type GenerateEnvironmentExampleOptions = {
   path?: string;
   fileName?: string;
+  isExample?: boolean;
   currentState?: string;
   listEnvironment?: string[];
 };
@@ -15,7 +16,11 @@ const generateEnvironmentFile = (data: Record<string, unknown>, options?: Genera
   const exampleContent = Object.entries(data)
     .map(([key, value]) => {
       const exampleValue = value === undefined ? `<${key}>` : value as string;
-      return `${key}=${exampleValue}`;
+      let result = `${key}=${exampleValue}`;
+      if (options?.isExample) {
+        result = `${key}=`;
+      }
+      return result;
     })
     .join('\n');
 
@@ -27,7 +32,7 @@ const generateEnvironmentExample = (data: Record<string, unknown>, options?: Gen
   if (options?.listEnvironment && options.listEnvironment.length > 0) {
     for (const environment of options.listEnvironment) {
       const fileName = `.example.${environment}.env`;
-      generateEnvironmentFile(data, { ...options, fileName });
+      generateEnvironmentFile(data, { ...options, fileName, isExample: true });
     }
   } else {
     generateEnvironmentFile(data, options);
