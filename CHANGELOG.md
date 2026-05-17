@@ -16,6 +16,12 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.5] - 2026-05-17
+
+- **fix:** enhance generateEnvironmentFile to handle example generation [`b8f6651`](https://github.com/TheElegantCoding/envlys/commit/b8f6651) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** reorder lintStaged commands in .gitlys.json for clarity [`9e263cf`](https://github.com/TheElegantCoding/envlys/commit/9e263cf) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update formatting of the files array in package.json [`1426a32`](https://github.com/TheElegantCoding/envlys/commit/1426a32) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.4] - 2026-05-17
 
 - **fix:** update release script to build before releasing [`8c978de`](https://github.com/TheElegantCoding/envlys/commit/8c978de) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
