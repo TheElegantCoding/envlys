@@ -39,7 +39,7 @@
     "build": "tsup",
     "typecheck": "tsc --noEmit",
     "lint": "eslint --fix",
-    "release": "bunx gitlys release"
+    "release": "bun run build && bunx gitlys release"
   },
   "dependencies": {
     "dotenv": "^17.4.2",
