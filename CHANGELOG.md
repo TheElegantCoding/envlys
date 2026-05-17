@@ -16,6 +16,13 @@ The list of changes have the description - commit - author.
 
 ## Released
 
+## 🚀 Version [1.0.3] - 2026-05-17
+
+- **fix:** update gitlys version in devDependencies to 2.2.0 [`8369a86`](https://github.com/TheElegantCoding/envlys/commit/8369a86) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** correct example file naming convention in generateEnvironmentExample function [`cb9c01c`](https://github.com/TheElegantCoding/envlys/commit/cb9c01c) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update package.json formatting and dependencies [`39bdd72`](https://github.com/TheElegantCoding/envlys/commit/39bdd72) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+- **fix:** update setting icon size in the README [`bae0a61`](https://github.com/TheElegantCoding/envlys/commit/bae0a61) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
+
 ## 🚀 Version [1.0.2] - 2026-05-08
 
 - **fix:** move dotenv and dotenv-expand to dependencies section in package.json [`d338063`](https://github.com/TheElegantCoding/envlys/commit/d338063) by [`@TheElegantCoding`](https://github.com/TheElegantCoding)
