@@ -28,9 +28,7 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": [
-    "./dist"
-  ],
+  "files": ["./dist"],
   "engines": {
     "node": ">=22.17.0",
     "bun": ">=1.1.0"
@@ -45,15 +43,15 @@
   },
   "dependencies": {
     "dotenv": "^17.4.2",
-    "dotenv-expand": "^13.0.0"
+    "dotenv-expand": "^13.0.0",
+    "logginlys": "^4.0.2",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^25.6.0",
-    "eslint-config-universal-code": "^1.0.15",
+    "eslint-config-universal-code": "^1.0.19",
     "gitlys": "^2.1.4",
-    "logginlys": "^4.0.2",
     "tsup": "^8.5.1",
-    "typescript": "^5.9.3",
-    "zod": "^4.3.6"
+    "typescript": "^5.9.3"
   }
 }
