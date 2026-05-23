@@ -12,10 +12,10 @@ const loadEnvironmentFiles = (options?: EnvironmentOptions) => {
   if (existsSync(environmentFilePath)) {
     const config = dotenv.config({ path: environmentFilePath, quiet: true });
     expand(config);
-    return { path: environmentFilePath, state: currentState };
+    return { path: environmentFilePath, state: currentState, source: 'file' as const };
   }
 
-  throw new Error(`File not found: ${environmentFilePath}`);
+  return { state: currentState, source: 'process.env' as const };
 };
 
 export { loadEnvironmentFiles };
